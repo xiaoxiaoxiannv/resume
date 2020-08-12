@@ -2,7 +2,8 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的简历</title>
     <style>
@@ -24,24 +25,127 @@
             padding: 1em;
         }
     </style>
+    <style media="print">
+        body {
+            margin: 0;
+        }
+
+        .page2 {
+            page-break-before: always;
+            margin-top: 30px;
+        }
+    </style>
+    <style>
+        p {
+            margin: .3em 0;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        h3, h4, h5, h6 {
+            color: #666;
+            margin: 0;
+        }
+        a {
+            color: #999;
+            text-decoration: none;
+            border-bottom: 1px solid;
+        }
+
+        ol, ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        strong {
+            font-weight: normal;
+            color: #f60;
+        }
+        .bio {
+            position: relative;
+        }
+
+        .bio img {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+    <style>
+        .projects p {
+            color: #666;
+        }
+
+        .projects strong {
+            color: #f60;
+        }
+
+        .projects > ol {
+            margin-top: 0;
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        .projects > ol > li {
+            margin-bottom: 24px;
+        }
+
+        .projects > ol > li > header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .projects > ol > li h3 {
+            display: inline-block;
+        }
+    </style>
+    <style>
+        @media (max-width: 500px) {
+            body {
+                margin: 0;
+            }
+            article {
+                width: auto;
+                height: auto;
+            }
+            .bio img {
+                display: none;
+            }
+            .projects img {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <article>
     <section class="bio">
         <h1>吴盼盼</h1>
-        <img src="./images/1.jpg" alt="" width="150" height="200">
+        <img src="./images/1.jpg" alt="" width="120" height="145">
         <p>
             女 | 25岁 | 前端开发工程师 | 上海
         </p>
         <p>
-            手机：18367618286 | 微信：wpp514 | 邮箱：1017929760@qq.com
+            手机/微信：<a href="tel:18367618286">18367618286</a> | 邮箱：<a href="mailto:1017929760@qq.com">1017929760@qq.com</a>
+
         </p>
     </section>
     <section class="education">
         <h2>教育经历</h2>
         <p>
             <span><time>2013.09</time>~<time>2017.06</time></span>
-            浙江财经大学东方学院 劳动与社会保障 本科</p>
+            浙江财经大学东方学院 劳动与社会保障 本科
+        </p>
+    </section>
+    <section class="others">
+        <h2>相关链接</h2>
+        <ul>
+            <li><a href="https://www.jianshu.com/u/92b46899cca2">我的博客</a>，目前已有 31 篇技术文章</li>
+            <li><a href="https://github.com/xiaoxiaoxiannv">我的 GitHub</a>，过去三个月有 200 次提交</li>
+        </ul>
     </section>
     <section class="skills">
         <h2>技能</h2>
@@ -51,7 +155,7 @@
                 <li>熟悉页面架构和布局,以及<strong>HTML5+CSS3+JavaScript等常用技术</strong></li>
                 <li>熟悉<strong>前后端分离</strong>技术，包括 AJAX、跨域、前端路由、Cookie、Session 等</li>
                 <li>熟练掌握 <strong>Vue全家桶</strong>的使用，包括 VueCli、VueRouter、Vuex 等</li>
-                <li>熟悉 React框架，包括 create-react-app、ReactRouter、常用hooks等</li>
+                <li>熟悉 <strong>React框架</strong>，包括 create-react-app、ReactRouter、常用hooks等</li>
                 <li>熟悉 ES6，包括 let / Promise / 析构赋值</li>
                 <li>了解 <strong>TypeScript</strong> 的使用，我的项目就是 TS 实现的</li>
                 <li>了解 <strong>Webpack 的配置和优化</strong></li>
@@ -64,14 +168,14 @@
             <li>
                 <header>
                     <h3>钱掌柜 Vue版</h3>
-                    <img src="./images/a.png" alt="" width="150" height="280">
                     <span>
               <a href="https://github.com/xiaoxiaoxiannv/dc-vue-website">源码链接</a>
               <a href="https://xiaoxiao_xiannv.gitee.io/dc-vue-website">作品预览</a>
             </span>
                 </header>
                 <p>
-                    该项目是一款极速记账应用，基于 <strong>TypeScript</strong> / <strong>Vue</strong> / <strong>Vue Router</strong>  / <strong>Vuex</strong>的 单页面应用。
+                    该项目是一款极速记账应用，基于<strong>TypeScript</strong> / <strong>Vue</strong> / <strong>Vue Router</strong> /
+                    <strong>Vuex</strong>的单页面应用。
 
                 </p>
                 <p>
@@ -88,41 +192,40 @@
             </span>
                 </header>
                 <p>
-                    该项目也是一款极速记账应用，基于<strong>TypeScript</strong> / <strong>React</strong> / <strong>React Router</strong>独立开发的，项目中配置了<strong>webpack</strong>，使用<strong>Styled Compnent</strong>，并通过封装了一个自定义<strong>hook（useTags）</strong>来实现，也让我对<strong>SVG Icon</strong>有了深刻理解，并写了博客记录。
+                    该项目是基于<strong>TypeScript</strong> / <strong>React</strong> / <strong>React Router</strong>独立开发的，项目中配置了<strong>webpack</strong>，使用<strong>Styled
+                    Compnent</strong>，并通过封装了一个自定义<strong>hook（useTags）</strong>来实现，也让我对<strong>SVG Icon</strong>有了深刻理解，并写了博客记录。
                 </p>
             </li>
-            <li>
+            <li class="page2">
                 <header>
                     <h3>绘制皮卡丘</h3>
-                    <img src="./images/b.png" alt="" width="600" height="380">
-                    <br/>
                     <span>
               <a href="https://github.com/xiaoxiaoxiannv/pikachu">源码链接</a>
               <a href="https://xiaoxiaoxiannv.github.io/pikachu/src/test.html">作品预览</a>
             </span>
                 </header>
+                <img src="./images/b.png" alt="" width="600" height="380">
                 <p>
-                    是一个使用 <strong>原生JS</strong>开发，主要思路是使用<strong>innerText</strong>、<strong>innerHtml</strong>、启动和取消计时器、更改time、绑定事件，将CSS代码一个个显示在页面上，能够自动画出皮卡丘过程的小作品。
+                    是一个使用<strong>原生JS</strong>开发，主要思路是使用<strong>innerText</strong>、<strong>innerHtml</strong>、启动和取消计时器、更改time、绑定事件，将CSS代码一个个显示在页面上，能够自动画出皮卡丘过程的小作品。
                 </p>
             </li>
             <li>
                 <header>
                     <h3>简易的画板</h3>
-                    <img src="./images/c.png" alt="" width="600" height="380">
-                    <br/>
                     <span>
               <a href="https://github.com/xiaoxiaoxiannv/canvas-2020">源码链接</a>
               <a href="https://xiaoxiaoxiannv.github.io/canvas-2020/">作品预览</a>
             </span>
                 </header>
+                <img src="./images/c.png" alt="" width="600" height="380">
                 <p>
-                    主要使用了HTML的 <strong>Canvas</strong>标签，功能包含画笔选色、橡皮擦、清空画板、保存快照，<strong>支持PC和移动端</strong>使用。
+                    主要使用了HTML的<strong>Canvas</strong>标签，功能包含画笔选色、橡皮擦、清空画板、保存快照，<strong>支持PC和移动端</strong>使用。
                 </p>
             </li>
         </ol>
     </section>
     <section class="jobs">
-        <h2>工作经历</h2>
+        <h2  style="page-break-before: always">工作经历</h2>
         <ol>
             <li>
                 <span><time>2019.06</time>~至今 | 上海赢鑫家具有限公司 | 人事专员</span>
@@ -136,7 +239,6 @@
         </ol>
     </section>
 </article>
-<script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
 <script src="./main.js"></script>
 </body>
 </html>
